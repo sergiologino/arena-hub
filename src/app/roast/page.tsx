@@ -104,7 +104,7 @@ export default function RoastPage() {
                     className="px-3 py-2 bg-dark-800 border border-dark-600 rounded-lg text-white text-sm w-40 text-center uppercase" />
                 </div>
               )}
-              <p className="text-sm text-dark-400 mt-2">Free quick analysis - Full report $9.99</p>
+              <p className="text-sm text-dark-400 mt-2">Free quick analysis - Full report $7.99</p>
             </div>
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ export default function RoastPage() {
             <div className="glass-card border-orange-500/30 relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-xs font-bold">BEST VALUE</div>
               <h3 className="text-xl font-bold mb-2">Full Roast</h3>
-              <div className="text-3xl font-black mb-1">$9.99</div>
+              <div className="text-3xl font-black mb-1">$7.99</div>
               <div className="text-sm text-dark-400 mb-4">per page, one-time</div>
               <ul className="space-y-3 mb-6">
                 {["All 8 analysis categories", "Specific fix recommendations", "Priority-ranked action items", "Copy rewrite suggestions", "CTA & design optimization", "Psychology trigger analysis", "Competitor comparison tips"].map((item, i) => (

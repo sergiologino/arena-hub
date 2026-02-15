@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     if (!verified) return NextResponse.json({ error: "Transaction not verified. Wait 30s and retry." }, { status: 400 })
 
     const store = found.tool === "roast" ? roastStore : found.tool === "ship" ? shipStore : paywallStore
-    const price = found.tool === "roast" ? 9.99 : 7.99
+    const price = 7.99
     await store.setPayment({ id: nanoid(12), reportId, amount: price, currency: "USDT", txHash, status: "confirmed", createdAt: new Date().toISOString() })
     await store.updateReport(reportId, { isPaid: true })
     return NextResponse.json({ status: "confirmed" })

@@ -12,7 +12,7 @@ import LoadingAnimation from "@/components/shared/LoadingAnimation"
 import ShareButtons from "@/components/shared/ShareButtons"
 
 const WALLET = process.env.NEXT_PUBLIC_USDT_WALLET || ""
-const PRICE = 9.99
+const PRICE = 7.99
 
 function saveToHistory(report: RoastReport) {
   try {

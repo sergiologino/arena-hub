@@ -16,7 +16,7 @@ const tools = [
     glow: "glow-orange",
     href: "/roast",
     features: ["8 analysis categories", "Conversion score 0-100", "Copy rewrite suggestions", "CTA optimization"],
-    price: "Free / $9.99",
+    price: "Free / $7.99",
   },
   {
     icon: ClipboardCheck,
@@ -55,7 +55,7 @@ const stats = [
 
 const faqs = [
   { q: "What is Arena AI?", a: "Arena AI is a suite of three AI-powered website audit tools designed for founders, marketers, and developers. Each tool focuses on a different aspect: landing page conversion, launch readiness, and pricing page optimization." },
-  { q: "Are the tools free?", a: "Each tool offers a free tier with limited analysis. Full reports are available as one-time purchases ($7.99-$9.99) with no subscription required." },
+  { q: "Are the tools free?", a: "Each tool offers a free tier with limited analysis. Full reports are available as one-time purchases ($7.99) with no subscription required." },
   { q: "What AI model do you use?", a: "We use GPT-4 Vision to analyze both the visual design (via screenshots) and the content of your pages. This allows us to give feedback on layout, copy, and design simultaneously." },
   { q: "Can I audit competitor websites?", a: "Yes! All three tools work with any public URL. Enter a competitor's landing page, pricing page, or website to see how they score." },
   { q: "How do payments work?", a: "We accept USDT on the Polygon network. Fast transactions, low fees, and no signups required. Just pay and unlock your full report instantly." },

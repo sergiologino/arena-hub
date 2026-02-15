@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "operatingSystem": "Web",
               "offers": [
                 { "@type": "Offer", "name": "RoastPage.ai Free", "price": "0", "priceCurrency": "USD" },
-                { "@type": "Offer", "name": "RoastPage.ai Full", "price": "9.99", "priceCurrency": "USD" },
+                { "@type": "Offer", "name": "RoastPage.ai Full", "price": "7.99", "priceCurrency": "USD" },
                 { "@type": "Offer", "name": "ShipChecklist.ai Free", "price": "0", "priceCurrency": "USD" },
                 { "@type": "Offer", "name": "ShipChecklist.ai Full", "price": "7.99", "priceCurrency": "USD" },
                 { "@type": "Offer", "name": "PaywallAudit.ai Free", "price": "0", "priceCurrency": "USD" },
