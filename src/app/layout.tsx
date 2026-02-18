@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     creator: "@SavkinSergeyX",
   },
   robots: { index: true, follow: true },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://arena-hub.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://app-audit.pro"),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "WebApplication",
               "name": "Arena AI",
-              "url": process.env.NEXT_PUBLIC_BASE_URL || "https://arena-hub.vercel.app",
+              "url": process.env.NEXT_PUBLIC_BASE_URL || "https://app-audit.pro",
               "description": "Three AI-powered website audit tools: Landing Page Roast, Pre-Launch Audit, and Paywall Analysis.",
               "applicationCategory": "WebApplication",
               "operatingSystem": "Web",

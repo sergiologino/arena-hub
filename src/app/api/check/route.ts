@@ -19,14 +19,26 @@ function validatePromo(code: string): boolean {
   return true
 }
 
-async function checkUrlExists(url: string): Promise<boolean> {
+async function checkUrlExists(url: string): Promise<{ reachable: boolean; reason?: string }> {
   try {
     const c = new AbortController()
-    const t = setTimeout(() => c.abort(), 10000)
-    const r = await fetch(url, { method: "GET", signal: c.signal, headers: { "User-Agent": "Mozilla/5.0 (compatible; ArenaBot/1.0)" }, redirect: "follow" })
+    const t = setTimeout(() => c.abort(), 12000)
+    const r = await fetch(url, {
+      method: "HEAD",
+      signal: c.signal,
+      headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" },
+      redirect: "follow",
+    })
     clearTimeout(t)
-    return r.ok
-  } catch { return false }
+    return { reachable: true }
+  } catch (err: any) {
+    if (err?.name === "AbortError") return { reachable: false, reason: "The site took too long to respond (timeout). It may be down or blocking automated requests." }
+    const msg = err?.cause?.code || err?.code || ""
+    if (msg === "ENOTFOUND" || msg === "ERR_NAME_NOT_RESOLVED") return { reachable: false, reason: "DNS lookup failed — the domain does not exist or has no DNS records." }
+    if (msg === "ECONNREFUSED") return { reachable: false, reason: "Connection refused — the server is not accepting connections." }
+    if (msg === "CERT_HAS_EXPIRED" || msg === "UNABLE_TO_VERIFY_LEAF_SIGNATURE") return { reachable: false, reason: "SSL certificate error — the site has an invalid or expired certificate." }
+    return { reachable: false, reason: `Could not connect to the site (${msg || "network error"}). It may be down, blocking bots, or behind a firewall.` }
+  }
 }
 
 async function getScreenshotBase64(url: string): Promise<string | null> {
@@ -85,8 +97,8 @@ export async function POST(request: NextRequest) {
     if (!url) return NextResponse.json({ error: "URL is required" }, { status: 400 })
     if (!isValidUrl(url)) return NextResponse.json({ error: "Please enter a valid URL" }, { status: 400 })
 
-    const exists = await checkUrlExists(url)
-    if (!exists) return NextResponse.json({ error: "Website not reachable." }, { status: 400 })
+    const check = await checkUrlExists(url)
+    if (!check.reachable) return NextResponse.json({ error: `Website not reachable. ${check.reason || "Check the URL."}` }, { status: 400 })
 
     const isPromo = promoCode ? validatePromo(promoCode) : false
     const reportId = nanoid(12)
