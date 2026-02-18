@@ -43,7 +43,7 @@ export default function HistoryPage() {
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-dark-300 hover:text-white transition">
             <ArrowLeft className="w-4 h-4" />
-            <span className="font-bold">Arena AI</span>
+            <span className="font-bold">App Audit</span>
           </Link>
         </div>
       </nav>

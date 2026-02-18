@@ -54,7 +54,7 @@ const stats = [
 ]
 
 const faqs = [
-  { q: "What is Arena AI?", a: "Arena AI is a suite of three AI-powered website audit tools designed for founders, marketers, and developers. Each tool focuses on a different aspect: landing page conversion, launch readiness, and pricing page optimization." },
+  { q: "What is App Audit?", a: "App Audit is a suite of three AI-powered website audit tools designed for founders, marketers, and developers. Each tool focuses on a different aspect: landing page conversion, launch readiness, and pricing page optimization." },
   { q: "Are the tools free?", a: "Each tool offers a free tier with limited analysis. Full reports are available as one-time purchases ($7.99) with no subscription required." },
   { q: "What AI model do you use?", a: "We use GPT-4 Vision to analyze both the visual design (via screenshots) and the content of your pages. This allows us to give feedback on layout, copy, and design simultaneously." },
   { q: "Can I audit competitor websites?", a: "Yes! All three tools work with any public URL. Enter a competitor's landing page, pricing page, or website to see how they score." },
@@ -71,7 +71,7 @@ export default function HubPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Zap className="w-7 h-7 text-indigo-500" />
-            <span className="text-xl font-bold">Arena<span className="text-indigo-500"> AI</span></span>
+            <span className="text-xl font-bold">App<span className="text-indigo-500"> Audit</span></span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/roast" className="text-sm text-dark-300 hover:text-orange-400 transition">Roast</Link>
@@ -211,7 +211,7 @@ export default function HubPage() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-indigo-500" />
-              <span className="font-bold">Arena<span className="text-indigo-500"> AI</span></span>
+              <span className="font-bold">App<span className="text-indigo-500"> Audit</span></span>
             </div>
             <div className="flex items-center gap-6 text-sm text-dark-400">
               <Link href="/roast" className="hover:text-orange-400 transition">RoastPage.ai</Link>
@@ -220,7 +220,7 @@ export default function HubPage() {
               <Link href="/history" className="hover:text-white transition">History</Link>
             </div>
           </div>
-          <p className="text-center text-xs text-dark-500 mt-4">&copy; 2025 Arena AI. All tools are powered by GPT-4 Vision.</p>
+          <p className="text-center text-xs text-dark-500 mt-4">&copy; 2025 App Audit. All tools are powered by GPT-4 Vision.</p>
         </div>
       </footer>
     </div>

@@ -1,4 +1,4 @@
 import { NextResponse } from "next/server"
 export async function GET() {
-  return NextResponse.json({ status: "ok", ts: new Date().toISOString(), service: "Arena AI Hub" })
+  return NextResponse.json({ status: "ok", ts: new Date().toISOString(), service: "App Audit Hub" })
 }

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = report.summary || `Pre-launch audit for ${domain}`
   return {
     title, description,
-    openGraph: { title, description, type: "website", url: `${base}/ship/report/${params.id}`, siteName: "Arena AI", images: [{ url: ogImage, width: 1200, height: 630, alt: title }] },
+    openGraph: { title, description, type: "website", url: `${base}/ship/report/${params.id}`, siteName: "App Audit", images: [{ url: ogImage, width: 1200, height: 630, alt: title }] },
     twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   }
 }

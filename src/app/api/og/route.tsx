@@ -14,7 +14,7 @@ export async function GET(req: Request) {
     paywall: { emoji: "\uD83D\uDCB0", name: "PaywallAudit.ai", color: "#a855f7", tagline: "Monetization & Pricing Score" },
   }
 
-  const cfg = toolConfig[tool] || { emoji: "\u26A1", name: "Arena AI", color: "#6366f1", tagline: "AI Website Audit Tools" }
+  const cfg = toolConfig[tool] || { emoji: "\u26A1", name: "App Audit", color: "#6366f1", tagline: "AI Website Audit Tools" }
 
   if (score && site) {
     const scoreNum = Number(score)

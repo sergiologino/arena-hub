@@ -58,7 +58,7 @@ async function fetchPageData(url: string): Promise<{ text: string; headers: stri
   try {
     const c = new AbortController()
     const t = setTimeout(() => c.abort(), 8000)
-    const r = await fetch(url, { signal: c.signal, headers: { "User-Agent": "Mozilla/5.0 (compatible; ArenaBot/1.0)" } })
+    const r = await fetch(url, { signal: c.signal, headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" } })
     clearTimeout(t)
     const headersStr = Array.from(r.headers.entries()).map(([k, v]) => `${k}: ${v}`).join("\n")
     const html = await r.text()
